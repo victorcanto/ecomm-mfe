@@ -14,7 +14,11 @@ module.exports = {
       exposes: {
         './ProductsIndex': './src/index',
       },
-      shared: ['faker'],
+      shared: {
+        faker: {
+          singleton: true, //diz para carregar apenas uma cópia do faker, não importa o que aconteça.
+        },
+      },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
