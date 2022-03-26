@@ -8,4 +8,4 @@ for (let i = 0; i < PRODUCTS_QTD; i++) {
   products += `<div>${name}</div>`;
 }
 
-console.log(products);
+document.querySelector('#dev-products').innerHTML = products;
